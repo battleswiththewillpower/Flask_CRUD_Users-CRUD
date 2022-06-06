@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selected User</title>
+</head>
+<body>
+    <a href="/allusers">Home</a>
+    <h1>User {{ users.id }}</h1>
+    
+          <p> Name: {{ users.name }}</p>
+          <p> Email: {{ users.email }} </p>
+          <p> Description: {{ users.description }}</p> 
+          <p> Last Updated On: {{ users.updated_at }}</p>
+          
+        
+      
+      <a href="/user/edit/{{ users.id }}">Edit</a> | <a href="/user/destroy/{{ users.id }}">Delete</a>
+
+
+</body>
+</html>

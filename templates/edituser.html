@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit User</title>
+</head>
+<body>
+    <form action="/user/update" method="POST">
+        <!-- display which user we are edit in the header -->
+        <h2 class="">Edit {{ user.name }}</h2>
+        <input type="hidden" name="id" value="{{ user.id }}">
+        <label for="name">Name:</label>
+        <input type="text" name="name" value="{{ user.name }}">
+        <label for="email">Email:</label>
+        <input type="text" name="email" value="{{ user.email }}">
+        <label for="description" >Description:</label>
+        <input type="text" name="description" value="{{ user.description }}">
+        <a href="/allusers"><input type="submit" value="Update User"></a>
+    </form> 
+
+    <!-- <a href="/update/allusers">Update</a> | <a href="/selectuser">Show User</a> -->
+
+</body>
+</html>
